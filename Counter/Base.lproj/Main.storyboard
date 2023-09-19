@@ -19,32 +19,80 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3s-xU-RxZ">
                                 <rect key="frame" x="172.33333333333334" y="163" width="48.666666666666657" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHL-d0-aUd">
-                                <rect key="frame" x="172.66666666666666" y="408" width="48" height="40"/>
+                                <rect key="frame" x="63" y="305" width="110" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="title"/>
+                                <state key="normal" title="title">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="buttonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZI-9h-hTN"/>
+                                    <action selector="additionButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="DhW-zr-Zqa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s22-3N-gdq">
+                                <rect key="frame" x="220" y="305" width="110" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8kH-ZV-bCx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="title">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="subtractionButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="c25-gW-lLJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b21-6c-DZa">
+                                <rect key="frame" x="172.66666666666666" y="388" width="48" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="title">
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpC-mT-2lS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-ie-lcH">
+                                <rect key="frame" x="63" y="476" width="267" height="295"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VHL-d0-aUd" firstAttribute="top" secondItem="F3s-xU-RxZ" secondAttribute="bottom" constant="209" id="6Np-wJ-1LV"/>
+                            <constraint firstItem="VHL-d0-aUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="2i4-xD-sTl"/>
+                            <constraint firstItem="b21-6c-DZa" firstAttribute="top" secondItem="F3s-xU-RxZ" secondAttribute="bottom" constant="189" id="74m-pM-A52"/>
+                            <constraint firstItem="0Yr-ie-lcH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="7Cm-YC-YHM"/>
+                            <constraint firstItem="0Yr-ie-lcH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FGy-Sx-LKt"/>
+                            <constraint firstItem="s22-3N-gdq" firstAttribute="leading" secondItem="VHL-d0-aUd" secondAttribute="trailing" constant="47" id="GKx-Gp-6vX"/>
                             <constraint firstItem="F3s-xU-RxZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="HGS-lC-glQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VHL-d0-aUd" secondAttribute="bottom" constant="370" id="gRf-aa-9SA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Yr-ie-lcH" secondAttribute="bottom" constant="47" id="S2L-lY-BGt"/>
+                            <constraint firstItem="VHL-d0-aUd" firstAttribute="top" secondItem="F3s-xU-RxZ" secondAttribute="bottom" constant="106" id="WGH-eP-ANk"/>
+                            <constraint firstItem="s22-3N-gdq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.279898" id="Xff-FS-K5E"/>
+                            <constraint firstItem="s22-3N-gdq" firstAttribute="top" secondItem="F3s-xU-RxZ" secondAttribute="bottom" constant="106" id="f7k-fP-f7N"/>
                             <constraint firstItem="F3s-xU-RxZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jbi-fZ-h5T"/>
-                            <constraint firstItem="VHL-d0-aUd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x8o-Tn-mve"/>
+                            <constraint firstItem="0Yr-ie-lcH" firstAttribute="top" secondItem="b21-6c-DZa" secondAttribute="bottom" constant="40" id="oSY-mc-cq1"/>
+                            <constraint firstItem="b21-6c-DZa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xti-4e-2Ns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s22-3N-gdq" secondAttribute="trailing" constant="63" id="yL7-Ws-JbA"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="counterButton" destination="VHL-d0-aUd" id="hkN-L6-5KC"/>
-                        <outlet property="counterLabel" destination="F3s-xU-RxZ" id="vQx-Tt-kQy"/>
+                        <outlet property="additionButton" destination="VHL-d0-aUd" id="1BS-zN-dXF"/>
+                        <outlet property="counterLabel" destination="F3s-xU-RxZ" id="t4R-ul-3G3"/>
+                        <outlet property="historyTextView" destination="0Yr-ie-lcH" id="6zP-Cw-0Wo"/>
+                        <outlet property="resetButton" destination="b21-6c-DZa" id="rEz-kc-8NJ"/>
+                        <outlet property="subtractionButton" destination="s22-3N-gdq" id="9pC-1C-dnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -53,7 +101,13 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
