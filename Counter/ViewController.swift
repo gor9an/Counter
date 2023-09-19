@@ -50,12 +50,10 @@ class ViewController: UIViewController {
             historyTextView.text += "[\(dateFormatter.string(from: date))] attempt to reduce the counter value below 0\n"
             return
         }
-        
-        if counter - 1 > 0 {
-            counter -= 1
+        counter -= 1
+        if counter != 0 {
             counterLabel.text = "Counter value: \(counter)"
         } else {
-            counter = 0
             counterLabel.text = "0"
         }
         
