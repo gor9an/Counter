@@ -37,9 +37,6 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s22-3N-gdq">
                                 <rect key="frame" x="220" y="305" width="110" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="8kH-ZV-bCx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="title">
@@ -61,10 +58,13 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-ie-lcH">
-                                <rect key="frame" x="63" y="476" width="267" height="295"/>
+                                <rect key="frame" x="63" y="476" width="280" height="295"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="OmP-ar-pG2"/>
+                                </constraints>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -74,7 +74,6 @@
                             <constraint firstItem="VHL-d0-aUd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="2i4-xD-sTl"/>
                             <constraint firstItem="b21-6c-DZa" firstAttribute="top" secondItem="F3s-xU-RxZ" secondAttribute="bottom" constant="189" id="74m-pM-A52"/>
                             <constraint firstItem="0Yr-ie-lcH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="7Cm-YC-YHM"/>
-                            <constraint firstItem="0Yr-ie-lcH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FGy-Sx-LKt"/>
                             <constraint firstItem="s22-3N-gdq" firstAttribute="leading" secondItem="VHL-d0-aUd" secondAttribute="trailing" constant="47" id="GKx-Gp-6vX"/>
                             <constraint firstItem="F3s-xU-RxZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="HGS-lC-glQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Yr-ie-lcH" secondAttribute="bottom" constant="47" id="S2L-lY-BGt"/>
