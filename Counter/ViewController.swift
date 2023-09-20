@@ -9,11 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var additionButton: UIButton!
-    @IBOutlet weak var subtractionButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var historyTextView: UITextView!
+    @IBOutlet weak private var counterLabel: UILabel!
+    @IBOutlet weak private var additionButton: UIButton!
+    @IBOutlet weak private var subtractionButton: UIButton!
+    @IBOutlet weak private var resetButton: UIButton!
+    @IBOutlet weak private var historyTextView: UITextView!
     private var counter: Int = 0
     private let dateFormatter = DateFormatter()
     
@@ -38,13 +38,13 @@ class ViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "ru_RUS")
     }
     
-    @IBAction func additionButtonDidTap() {
+    @IBAction private func additionButtonDidTap() {
         counter += 1
         counterLabel.text = "Counter value: \(counter)"
         
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value changed to +1\n"
     }
-    @IBAction func subtractionButtonDidTap() {
+    @IBAction private func subtractionButtonDidTap() {
         guard counter != 0 else {
             historyTextView.text += "[\(dateFormatter.string(from: Date()))] attempt to reduce the counter value below 0\n"
             return
@@ -60,13 +60,13 @@ class ViewController: UIViewController {
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value changed to -1\n"
     }
     
-    @IBAction func resetButtonDidTap() {
+    @IBAction private func resetButtonDidTap() {
         counter = 0
         counterLabel.text = "0"
         
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value reset\n"
     }
     
-
+    
 }
 
