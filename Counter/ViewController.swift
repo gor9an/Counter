@@ -43,10 +43,12 @@ class ViewController: UIViewController {
         counterLabel.text = "Counter value: \(counter)"
         
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value changed to +1\n"
+        textViewScroll()
     }
     @IBAction private func subtractionButtonDidTap() {
         guard counter != 0 else {
             historyTextView.text += "[\(dateFormatter.string(from: Date()))] attempt to reduce the counter value below 0\n"
+            textViewScroll()
             return
         }
         
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
         }
         
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value changed to -1\n"
+        textViewScroll()
     }
     
     @IBAction private func resetButtonDidTap() {
@@ -65,6 +68,11 @@ class ViewController: UIViewController {
         counterLabel.text = "0"
         
         historyTextView.text += "[\(dateFormatter.string(from: Date()))] value reset\n"
+        textViewScroll()
+    }
+    private func textViewScroll() {
+        let range = NSRange(location: historyTextView.text.count - 1, length: 1)
+        historyTextView.scrollRangeToVisible(range)
     }
     
     
